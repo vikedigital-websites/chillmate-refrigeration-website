@@ -4,7 +4,6 @@ import { useMediaQueries, useMediaQuery } from "@react-hook/media-query";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoMenu as MenuIcon } from "react-icons/io5";
-import logo from "/logo.svg"
 
 const navItems = [
   <a key="1" href="#">Home</a>,
@@ -28,7 +27,7 @@ export default function Home() {
       <main className="w-full max-w-[1120px] px-4">
 
         <header className="h-20 md:h28 flex space-b justify-between items-center py-4">
-          <Image src={logo.src} alt="Chillmate Logo" width={0} height={0} id="logo" className="w-auto h-full" priority></Image>
+          <Image src={'/chillmate-refrigeration-website/logo.svg'} alt="Chillmate Logo" width={0} height={0} id="logo" className="w-auto h-full" priority></Image>
           {isClient && !isSmallScreen && <nav className="flex gap-4">{navItems}</nav>}
           {isClient && isSmallScreen && <MenuIcon />}
         </header>
