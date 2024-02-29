@@ -15,8 +15,8 @@ const navItems = [
 
 export default function Home() {
   const isSmallScreen = useMediaQuery('(max-width: 1120px)')
-  const [isClient, setIsClient] = useState (false)
- 
+  const [isClient, setIsClient] = useState(false)
+
   useEffect(() => {
     setIsClient(true)
   }, [])
@@ -27,7 +27,7 @@ export default function Home() {
       <main className="w-full max-w-[1120px] px-4">
 
         <header className="h-20 md:h28 flex space-b justify-between items-center py-4">
-          <Image src={'/chillmate-refrigeration-website/logo.svg'} alt="Chillmate Logo" width={0} height={0} id="logo" className="w-auto h-full" priority></Image>
+          <Image src={'/logo.svg'} alt="Chillmate Logo" width={0} height={0} id="logo" className="w-auto h-full" priority></Image>
           {isClient && !isSmallScreen && <nav className="flex gap-4">{navItems}</nav>}
           {isClient && isSmallScreen && <MenuIcon />}
         </header>
