@@ -18,6 +18,7 @@ const FormInput = forwardRef(({ id, type, name, autoComplete, onFocus, onBlur, r
         />
     );
 });
+FormInput.displayName = "FormInput";
 const FormTextArea = forwardRef(({ id, name, autoComplete, onFocus, onBlur, required }: React.ComponentPropsWithoutRef<"textarea">, ref: ForwardedRef<HTMLTextAreaElement | null>) => {
     return (
         <textarea
@@ -32,6 +33,7 @@ const FormTextArea = forwardRef(({ id, name, autoComplete, onFocus, onBlur, requ
         />
     );
 });
+FormTextArea.displayName = "FormTextArea";
 const FormLabel = forwardRef(({ htmlFor, children, isFocused }: React.ComponentPropsWithoutRef<"label"> & { isFocused: boolean }, ref) => {
     return (
         <label htmlFor={htmlFor} className={`absolute z-10 origin-top-left  ${isFocused ? "bottom-full pb-1 pl-3 text-xs text-white " : "p-3 text-sm text-primary"} `}>
@@ -39,6 +41,7 @@ const FormLabel = forwardRef(({ htmlFor, children, isFocused }: React.ComponentP
         </label>
     );
 });
+FormLabel.displayName = "FormLabel";
 
 type FormItemProps = {
     inputType: "input" | "textarea";
@@ -68,7 +71,7 @@ const FormItem = ({ inputType, name, id, autoComplete, type, label, className }:
         </div>
     );
 };
-
+FormItem.displayName = "FormItem";
 const EnquireForm = ({ ...rest }: Props) => {
     return (
         <form className='flex flex-col items-center justify-center gap-6'>
@@ -84,5 +87,7 @@ const EnquireForm = ({ ...rest }: Props) => {
         </form>
     );
 };
+
+EnquireForm.displayName = "EnquireForm";
 
 export default EnquireForm;
