@@ -57,7 +57,6 @@ const FormItem = ({ inputType, name, id, autoComplete, type, label, className }:
     const [isFocused, setFocus] = useState(false);
     const InputRef = useRef<HTMLInputElement | null>(null);
     const TextAreaRef = useRef<HTMLTextAreaElement | null>(null);
-    console.log(isFocused);
     return (
         <div className='relative flex w-full'>
             <FormLabel htmlFor={id} isFocused={isFocused}>
