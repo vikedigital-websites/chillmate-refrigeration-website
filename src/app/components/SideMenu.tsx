@@ -20,7 +20,6 @@ const SideMenu = ({ close, logo, navItems }: Props) => {
         if (slideAnimation === "animate-slideInRight") return;
         close();
     };
-    console.log(navItems);
 
     const generateNavItems = navItems.map((items, index) => {
         return (
