@@ -7,6 +7,7 @@ import SideMenu from "./components/SideMenu";
 import StandardHeaderLogoWithNav from "./components/StandardHeaderLogoWithNav";
 import SectionRoundedBox from "./components/SectionRoundedBox";
 import Hero from "./sections/Hero";
+import Services from "./sections/Services";
 
 export default function Home() {
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -15,11 +16,11 @@ export default function Home() {
     const navItems = [
         {
             label: "Home",
-            href: "#header",
+            href: "#hero-magnet",
         },
         {
             label: "Services",
-            href: "#header",
+            href: "#services-magnet",
         },
         {
             label: "Locations",
@@ -46,8 +47,9 @@ export default function Home() {
             <StandardHeaderLogoWithNav logo={logo} navItems={navItems} openMobileMenu={() => setSideMenuIsOpen((prev) => !prev)} />
 
             {isClient && sideMenuIsOpen && <SideMenu logo={logo} close={closeSideMenu} navItems={navItems}></SideMenu>}
-            <main className='w-full max-w-[1120px] overflow-x-hidden px-4 xl:p-0'>
+            <main className='flex w-full max-w-[1120px] flex-col gap-32 overflow-x-hidden px-4 xl:p-0'>
                 <Hero />
+                <Services />
             </main>
         </>
     );
