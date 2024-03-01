@@ -74,7 +74,7 @@ FormItem.displayName = "FormItem";
 const EnquireForm = ({ ...rest }: Props) => {
     return (
         <form className='flex flex-col items-center justify-center gap-6'>
-            <h5>Enquire Now</h5>
+            <p className='text-xl'>Enquire Now</p>
             <div className='relative grid grid-cols-2  gap-4'>
                 <FormItem className='input' inputType='input' type='text' id='name' name='name' autoComplete='name' label='Name'></FormItem>
                 <FormItem className='input' inputType='input' type='text' id='phone' name='phone' autoComplete='tel-local' label='Phone Number'></FormItem>

@@ -20,7 +20,9 @@ const StandardHeaderLogoWithNav = ({ logo, navItems, openMobileMenu }: Props) =>
     });
     return (
         <header id='header' className='sticky top-0 z-10 flex h-20 w-full max-w-[1120px]  items-center justify-between bg-white px-4 py-4 md:h-28 '>
-            <Image src={logo} alt='Chillmate Logo' width={0} height={0} id='logo' className='h-full w-auto' priority></Image>
+            <a href='#hero-magnet' className='h-full w-auto'>
+                <Image src={logo} alt='Chillmate Logo' width={0} height={0} id='logo' className='h-full w-auto' priority></Image>
+            </a>
 
             <nav className='hidden gap-4 md:flex'>{generateNavItems}</nav>
 

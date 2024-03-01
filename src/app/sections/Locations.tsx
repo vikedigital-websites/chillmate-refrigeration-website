@@ -12,8 +12,8 @@ const Locations = (props: Props) => {
             <AnchorMagnet sectionId='locations' />
             <SectionHeading theme='light'>Areas We Cover</SectionHeading>
             <div className='flex flex-col items-center gap-4'>
-                <h4>Based in Burleigh Waters QLD</h4>
-                <p className='max-w-lg text-center font-light'>Can't find your suburb listed, but you're nearby? Feel free to give us a call and see if we can assist you.</p>
+                <h3>Based in Burleigh Waters QLD</h3>
+                <p className='max-w-lg text-center font-light'>{`Can't find your suburb listed, but you're nearby? Feel free to give us a call and see if we can assist you.`}</p>
             </div>
 
             <div className='grid grid-rows-[1fr-min-content] gap-8 lg:grid-cols-2 lg:grid-rows-1'>
