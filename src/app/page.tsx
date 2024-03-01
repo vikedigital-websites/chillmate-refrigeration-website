@@ -8,6 +8,7 @@ import StandardHeaderLogoWithNav from "./components/StandardHeaderLogoWithNav";
 import SectionRoundedBox from "./components/SectionRoundedBox";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
+import Locations from "./sections/Locations";
 
 export default function Home() {
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Home() {
         },
         {
             label: "Locations",
-            href: "#header",
+            href: "#locations-magnet",
         },
         {
             label: "About",
@@ -50,6 +51,7 @@ export default function Home() {
             <main className='flex w-full max-w-[1120px] flex-col gap-32 overflow-x-hidden px-4 xl:p-0'>
                 <Hero />
                 <Services />
+                <Locations />
             </main>
         </>
     );

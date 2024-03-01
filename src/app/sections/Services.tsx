@@ -13,7 +13,7 @@ const Services = (props: Props) => {
         <section id='services' className='relative flex w-full flex-col items-center gap-16'>
             <AnchorMagnet sectionId='services' />
             <SectionHeading>Our Services</SectionHeading>
-            <div className='grid w-full grid-rows-3 gap-8 md:grid-cols-3'>
+            <div className='grid w-full grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-1'>
                 <ServiceCardImageTextRounded img={maintenanceImg} title='Maintenance' description='Scheduled maintenance programs to ensure the optimal performance and longevity of refrigeration equipment' />
                 <ServiceCardImageTextRounded img={installationImg} title='Installation' description='Professional installation of commercial refrigeration systems' />
                 <ServiceCardImageTextRounded
