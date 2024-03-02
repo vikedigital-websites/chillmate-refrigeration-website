@@ -8,11 +8,11 @@ type Props = {};
 
 const Locations = (props: Props) => {
     return (
-        <div id='locations' className='relative flex w-full flex-col items-center gap-8 rounded-2xl bg-primary p-8 text-white drop-shadow-md md:p-16'>
+        <section id='locations-section' className='relative flex w-full flex-col items-center gap-8 rounded-2xl bg-primary p-8 text-white drop-shadow-md md:p-16'>
             <AnchorMagnet sectionId='locations' />
             <SectionHeading theme='light'>Areas We Cover</SectionHeading>
             <div className='flex flex-col items-center gap-4'>
-                <h3>Based in Burleigh Waters QLD</h3>
+                <h3 className='text-center'>Based in Burleigh Waters QLD</h3>
                 <p className='max-w-lg text-center font-light'>{`Can't find your suburb listed, but you're nearby? Feel free to give us a call and see if we can assist you.`}</p>
             </div>
 
@@ -41,7 +41,7 @@ const Locations = (props: Props) => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -8,12 +8,12 @@ type Props = {};
 
 const Contact = (props: Props) => {
     return (
-        <div id='contact' className='relative flex w-full flex-col items-center gap-8 rounded-2xl  bg-primary p-8 text-white drop-shadow-md md:p-16 lg:gap-16'>
+        <section id='contact-section' className='relative flex w-full flex-col items-center gap-8 rounded-2xl  bg-primary p-8 text-white drop-shadow-md md:p-16 lg:gap-16'>
             <AnchorMagnet sectionId='contact' />
             <SectionHeading theme='light'>Contact Us</SectionHeading>
 
             <div className='grid grid-rows-[1fr-min-content] gap-8 lg:grid-cols-2 lg:grid-rows-1 lg:gap-16'>
-                <div id='locations-left' className='overflow-hidden rounded-xl'>
+                <div id='locations-left' className=' rounded-xl'>
                     <EnquireForm />
                 </div>
                 <div id='locations-right' className='flex flex-col gap-4 lg:justify-center lg:gap-16 '>
@@ -33,11 +33,16 @@ const Contact = (props: Props) => {
                     </div>
                     <div>
                         <h3>Location</h3>
-                        <p>Situated in Burleigh Waters, QLD, we extend our services to neighbouring suburbs within a 15km radius. Explore the list of serviced suburbs here.</p>
+                        <p>
+                            Situated in Burleigh Waters, QLD, we extend our services to neighbouring suburbs within a 15km radius. Explore the list of serviced suburbs{" "}
+                            <a href='#locations' className='underline'>
+                                here
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

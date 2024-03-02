@@ -72,16 +72,29 @@ const FormItem = ({ inputType, name, id, autoComplete, type, label, className }:
 };
 FormItem.displayName = "FormItem";
 const EnquireForm = ({ ...rest }: Props) => {
+    function generateUniqueID(): string {
+        const characters = "0123456789";
+        let uniqueID = "";
+
+        for (let i = 0; i < 4; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            uniqueID += characters[randomIndex];
+        }
+
+        return uniqueID;
+    }
+    const [uid, setUid] = useState(generateUniqueID());
+
     return (
         <form className='flex flex-col items-center justify-center gap-6'>
             <p className='text-xl'>Enquire Now</p>
             <div className='relative grid w-full  grid-cols-2 gap-4'>
-                <FormItem className='input' inputType='input' type='text' id='name' name='name' autoComplete='name' label='Name'></FormItem>
-                <FormItem className='input' inputType='input' type='text' id='phone' name='phone' autoComplete='tel-local' label='Phone Number'></FormItem>
+                <FormItem className='input' inputType='input' type='text' id={`name-${uid}`} name='name' autoComplete='name' label='Name'></FormItem>
+                <FormItem className='input' inputType='input' type='text' id={`phone-${uid}`} name='phone' autoComplete='tel-local' label='Phone Number'></FormItem>
             </div>
-            <FormItem className='input' inputType='input' type='text' id='email' name='email' autoComplete='email' label='Email'></FormItem>
-            <FormItem className='input' inputType='input' type='text' id='suburb' name='suburb' label='Suburb'></FormItem>
-            <FormItem className='input' inputType='textarea' id='message' name='message' label='Message'></FormItem>
+            <FormItem className='input' inputType='input' type='text' id={`email-${uid}`} name='email' autoComplete='email' label='Email'></FormItem>
+            <FormItem className='input' inputType='input' type='text' id={`suburb-${uid}`} name='suburb' label='Suburb'></FormItem>
+            <FormItem className='input' inputType='textarea' id={`message-${uid}`} name='message' label='Message'></FormItem>
             <PillButton type='submit'>Send</PillButton>
         </form>
     );

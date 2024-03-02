@@ -19,23 +19,23 @@ export default function Home() {
     const navItems = [
         {
             label: "Home",
-            href: "#hero-magnet",
+            href: "#hero",
         },
         {
             label: "Services",
-            href: "#services-magnet",
+            href: "#services",
         },
         {
             label: "Locations",
-            href: "#locations-magnet",
+            href: "#locations",
         },
         {
             label: "About",
-            href: "#header",
+            href: "#about",
         },
         {
             label: "Contact",
-            href: "#header",
+            href: "#contact",
         },
     ];
     const closeSideMenu = () => {
