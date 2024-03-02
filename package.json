@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "serve": "http-server ./out"
+        "serve": "next build && http-server ./out"
     },
     "dependencies": {
         "@react-hook/media-query": "^1.1.1",

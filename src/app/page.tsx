@@ -9,6 +9,8 @@ import SectionRoundedBox from "./components/SectionRoundedBox";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Locations from "./sections/Locations";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
 
 export default function Home() {
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -52,6 +54,8 @@ export default function Home() {
                 <Hero />
                 <Services />
                 <Locations />
+                <About />
+                <Contact />
             </main>
         </>
     );
