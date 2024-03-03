@@ -1,13 +1,15 @@
 import Image from "next/image";
 import React from "react";
+import PillButton from "./PillButton";
 
 type Props = {
     img: any;
     title: string;
     description: string;
+    openDetails?: () => void;
 };
 
-const ServiceCardImageTextRounded = ({ img, title, description, ...restProps }: Props & React.ComponentPropsWithoutRef<"div">) => {
+const ServiceCardImageTextRounded = ({ img, title, description, openDetails, ...restProps }: Props & React.ComponentPropsWithoutRef<"div">) => {
     return (
         <div className='grid grid-rows-[1fr_1fr_min-content] overflow-hidden rounded-xl bg-primary drop-shadow-md' {...restProps}>
             <div className='' style={{ backgroundImage: `url('${img.src}'); `, backgroundPosition: "right center" }}></div>
@@ -16,7 +18,9 @@ const ServiceCardImageTextRounded = ({ img, title, description, ...restProps }: 
                 <p className='text-sm font-light'>{description}</p>
             </div>
             <div className='flex justify-end p-4'>
-                <button className='text-white'>Details ›</button>
+                <button className='text-white hover:scale-110' onClick={openDetails}>
+                    Details ›
+                </button>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 "use client";
 
 import useClient from "@/hooks/useClient";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import logo from "./assets/logo.svg";
 import SideMenu from "./components/SideMenu";
 import StandardHeaderLogoWithNav from "./components/StandardHeaderLogoWithNav";
@@ -11,6 +11,7 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Locations from "./sections/Locations";
 import Services from "./sections/Services";
+import ServiceDetailModal from "./components/ServiceDetailModal";
 
 export default function Home() {
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
