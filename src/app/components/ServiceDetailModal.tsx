@@ -10,7 +10,7 @@ const ServiceDetailModal = forwardRef(({ children, title, toggleOpen, ...restPro
     const innerRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(outerRef, () => innerRef.current!, []);
     return (
-        <dialog ref={innerRef} {...restProps} className='rounded-xl bg-primary p-16 text-white drop-shadow-md backdrop:overscroll-contain backdrop:bg-white/75 backdrop:backdrop-blur-sm lg:max-w-[75%]'>
+        <dialog ref={innerRef} {...restProps} className='rounded-xl bg-primary p-8 text-white  drop-shadow-md backdrop:overscroll-contain backdrop:bg-white/75 backdrop:backdrop-blur-sm md:p-16 lg:max-w-[75%]'>
             <div className='flex flex-col gap-8 '>
                 <h3>{title}</h3>
                 {children}

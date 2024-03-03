@@ -110,7 +110,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <div className='mt-8 flex flex-col items-center justify-center gap-8'>
+            <div className='mt-8 flex flex-col items-center justify-center gap-8 text-center'>
                 <p>
                     Website designed and developed but{" "}
                     <a href='https://vikedigital.com.au' className='underline'>
