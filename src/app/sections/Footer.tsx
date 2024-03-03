@@ -7,8 +7,8 @@ type Props = {};
 
 const Footer = () => {
     return (
-        <footer id='footer-section' className='mt-64 flex w-full justify-center bg-primary px-4 text-white xl:p-16'>
-            <div className='cl:flex-col flex w-full flex-col items-center justify-between p-6 text-center lg:max-h-[500px] lg:flex-wrap  lg:items-start lg:text-start xl:max-h-[400px] 2xl:max-h-[400px] [&>*]:pb-8 [&_ul]:list-inside lg:[&_ul]:list-disc'>
+        <footer id='footer-section' className='mt-64 flex w-full flex-col justify-center bg-primary p-16 text-white'>
+            <div className='cl:flex-col flex w-full flex-col items-center justify-between text-center lg:max-h-[500px] lg:flex-wrap  lg:items-start lg:text-start xl:max-h-[400px] 2xl:max-h-[450px] [&>*]:pb-8 [&_ul]:list-inside lg:[&_ul]:list-disc'>
                 <div className='hidden max-w-3xl flex-col gap-16 2xl:flex'>
                     <Image src={logo} alt='Chillmate Logo' width={0} height={0} id='logo' className='h-auto w-full max-w-lg' priority></Image>
                     <p>
@@ -20,18 +20,36 @@ const Footer = () => {
                 <div>
                     <h3>Services</h3>
                     <ul>
-                        <li>Commercial Maintenance</li>
-                        <li>Commercial Installation</li>
-                        <li>Commercial Repair</li>
+                        <li>
+                            <a href='#service-maintenance' className='hover:underline'>
+                                Commercial Maintenance
+                            </a>
+                        </li>
+                        <li>
+                            <a href='service-installation' className='hover:underline'>
+                                Commercial Installation
+                            </a>
+                        </li>
+                        <li>
+                            <a href='service-repair' className='hover:underline'>
+                                Commercial Repair
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h3>Contact</h3>
                     <ul>
                         <li>
-                            <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}>{process.env.NEXT_PUBLIC_PHONE_NUMBER}</a>
+                            <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`} className='hover:underline'>
+                                {process.env.NEXT_PUBLIC_PHONE_NUMBER}
+                            </a>
                         </li>
-                        <li> chillmaterefrigeration@gmail.com</li>
+                        <li>
+                            <a href='mailto:chillmaterefrigeration@gmail.com' className='hover:underline'>
+                                chillmaterefrigeration@gmail.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -57,19 +75,29 @@ const Footer = () => {
                     <h3>Navigation</h3>
                     <ul>
                         <li>
-                            <a href='#home'>Home</a>
+                            <a href='#hero' className='hover:underline'>
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <a href='#services'>Services</a>
+                            <a href='#services' className='hover:underline'>
+                                Services
+                            </a>
                         </li>
                         <li>
-                            <a href='#locations'>Locations</a>
+                            <a href='#locations' className='hover:underline'>
+                                Locations
+                            </a>
                         </li>
                         <li>
-                            <a href='#about'>About</a>
+                            <a href='#about' className='hover:underline'>
+                                About
+                            </a>
                         </li>
                         <li>
-                            <a href='#contact'>Contact</a>
+                            <a href='#contact' className='hover:underline'>
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -80,6 +108,16 @@ const Footer = () => {
                         <li>7am - 3pm</li>
                     </ul>
                 </div>
+            </div>
+            <hr />
+            <div className='mt-8 flex flex-col items-center justify-center gap-8'>
+                <p>
+                    Website designed and developed but{" "}
+                    <a href='https://vikedigital.com.au' className='underline'>
+                        Vike Digital Pty Ltd
+                    </a>
+                </p>
+                <p>© Copyright 2024 ChillMate Refrigeration. All Rights Reserved.</p>
             </div>
         </footer>
     );

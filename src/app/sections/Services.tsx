@@ -14,11 +14,12 @@ const Services = (props: Props) => {
             <AnchorMagnet sectionId='services' />
             <SectionHeading>Our Services</SectionHeading>
             <div className='grid w-full grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-1'>
-                <ServiceCardImageTextRounded img={maintenanceImg} title='Maintenance' description='Scheduled maintenance programs to ensure the optimal performance and longevity of refrigeration equipment' />
-                <ServiceCardImageTextRounded img={installationImg} title='Installation' description='Professional installation of commercial refrigeration systems' />
+                <ServiceCardImageTextRounded id='service-maintenance' img={maintenanceImg} title='Maintenance' description='Scheduled maintenance programs to ensure the optimal performance and longevity of refrigeration equipment' />
+                <ServiceCardImageTextRounded id='service-installation' img={installationImg} title='Installation' description='Professional installation of commercial refrigeration systems' />
                 <ServiceCardImageTextRounded
+                    id='service-repair'
                     img={repairImage}
-                    title='Maintenance'
+                    title='Repair'
                     description='Prompt and reliable repair services for malfunctioning or broken refrigeration units, including diagnosis, troubleshooting, and fixing issues.'
                 />
             </div>
