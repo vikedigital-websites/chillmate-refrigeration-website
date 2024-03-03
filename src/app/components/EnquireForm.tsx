@@ -1,5 +1,6 @@
 import React, { ForwardedRef, HTMLAttributes, HTMLInputTypeAttribute, forwardRef, useRef, useState } from "react";
 import PillButton from "./PillButton";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 type Props = React.ComponentPropsWithoutRef<"form"> & {};
 
@@ -70,21 +71,9 @@ const FormItem = ({ inputType, name, id, autoComplete, type, label, className }:
         </div>
     );
 };
+
 FormItem.displayName = "FormItem";
-const EnquireForm = ({ ...rest }: Props) => {
-    function generateUniqueID(): string {
-        const characters = "0123456789";
-        let uniqueID = "";
-
-        for (let i = 0; i < 4; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            uniqueID += characters[randomIndex];
-        }
-
-        return uniqueID;
-    }
-    const [uid, setUid] = useState(generateUniqueID());
-
+const EnquireForm = ({ uid }: { uid: string }) => {
     return (
         <form className='flex flex-col items-center justify-center gap-6'>
             <p className='text-xl'>Enquire Now</p>

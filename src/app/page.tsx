@@ -5,12 +5,12 @@ import { useState } from "react";
 import logo from "./assets/logo.svg";
 import SideMenu from "./components/SideMenu";
 import StandardHeaderLogoWithNav from "./components/StandardHeaderLogoWithNav";
-import SectionRoundedBox from "./components/SectionRoundedBox";
-import Hero from "./sections/Hero";
-import Services from "./sections/Services";
-import Locations from "./sections/Locations";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+import Hero from "./sections/Hero";
+import Locations from "./sections/Locations";
+import Services from "./sections/Services";
 
 export default function Home() {
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -44,8 +44,8 @@ export default function Home() {
 
     return (
         <>
-            <a href='tel: 0422407129' className='block w-screen bg-primary p-2 text-center text-white'>
-                CALL DYLAN ON: <b>04 2240 7129</b>
+            <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`} className='block w-screen bg-primary p-2 text-center text-white'>
+                CALL DYLAN ON: <b>{process.env.NEXT_PUBLIC_PHONE_NUMBER}</b>
             </a>
             <StandardHeaderLogoWithNav logo={logo} navItems={navItems} openMobileMenu={() => setSideMenuIsOpen((prev) => !prev)} />
 
@@ -57,6 +57,7 @@ export default function Home() {
                 <About />
                 <Contact />
             </main>
+            <Footer />
         </>
     );
 }

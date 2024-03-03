@@ -14,7 +14,7 @@ const Contact = (props: Props) => {
 
             <div className='grid grid-rows-[1fr-min-content] gap-8 lg:grid-cols-2 lg:grid-rows-1 lg:gap-16'>
                 <div id='locations-left' className=' rounded-xl'>
-                    <EnquireForm />
+                    <EnquireForm uid='' />
                 </div>
                 <div id='locations-right' className='flex flex-col gap-4 lg:justify-center lg:gap-16 '>
                     <div>
@@ -26,8 +26,8 @@ const Contact = (props: Props) => {
                         <h3>Call Us</h3>
                         <p>
                             Call Dylan on{" "}
-                            <a href='tel:0422407129' className='underline'>
-                                0422407129
+                            <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`} className='underline'>
+                                {process.env.NEXT_PUBLIC_PHONE_NUMBER}
                             </a>
                         </p>
                     </div>

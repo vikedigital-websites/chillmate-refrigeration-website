@@ -22,7 +22,7 @@ const Hero = (props: Props) => {
                 <PillButton onClick={() => (location.href = "#contact")}>Contact Us Now</PillButton>
             </div>
             <div id='her-right' className='hidden lg:block'>
-                <EnquireForm />
+                <EnquireForm uid='hero' />
             </div>
         </section>
     );
