@@ -64,4 +64,6 @@ const Services = (props: Props) => {
     );
 };
 
+Services.displayName = "Services";
+
 export default Services;

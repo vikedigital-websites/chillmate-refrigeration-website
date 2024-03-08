@@ -46,4 +46,6 @@ const Contact = (props: Props) => {
     );
 };
 
+Contact.displayName = "Contact";
+
 export default Contact;

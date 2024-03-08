@@ -8,4 +8,6 @@ const AnchorMagnet = ({ sectionId }: Props) => {
     return <div id={`${sectionId}`} className='absolute bottom-full h-20 w-full md:h-28' />;
 };
 
+AnchorMagnet.displayName = "AnchorMagnet";
+
 export default AnchorMagnet;

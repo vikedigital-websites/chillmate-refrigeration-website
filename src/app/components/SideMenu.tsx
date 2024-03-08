@@ -44,4 +44,6 @@ const SideMenu = ({ close, logo, navItems }: Props) => {
     );
 };
 
+SideMenu.displayName = "SideMenu";
+
 export default SideMenu;

@@ -26,4 +26,5 @@ const ServiceCardImageTextRounded = ({ img, title, description, openDetails, ...
     );
 };
 
+ServiceCardImageTextRounded.displayName = "ServiceCardImageTextRounded";
 export default ServiceCardImageTextRounded;

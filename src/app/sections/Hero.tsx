@@ -27,5 +27,6 @@ const Hero = (props: Props) => {
         </section>
     );
 };
+Hero.displayName = "Hero";
 
 export default Hero;

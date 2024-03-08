@@ -21,5 +21,6 @@ const ServiceDetailModal = forwardRef(({ children, title, toggleOpen, ...restPro
         </dialog>
     );
 });
+ServiceDetailModal.displayName = "ServiceDetailModal";
 
 export default ServiceDetailModal;

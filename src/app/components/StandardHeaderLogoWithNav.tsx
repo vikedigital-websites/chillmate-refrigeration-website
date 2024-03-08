@@ -31,4 +31,6 @@ const StandardHeaderLogoWithNav = ({ logo, navItems, openMobileMenu }: Props) =>
     );
 };
 
+StandardHeaderLogoWithNav.displayName = "StandardHeaderLogoWithNav";
+
 export default StandardHeaderLogoWithNav;

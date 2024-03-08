@@ -31,4 +31,6 @@ const About = (props: Props) => {
     );
 };
 
+About.displayName = "About";
+
 export default About;

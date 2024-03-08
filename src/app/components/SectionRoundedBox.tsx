@@ -1,11 +1,12 @@
 import React from "react";
 
 type Props = {
-  children: any;
+    children: any;
 };
 
 const SectionRoundedBox = ({ children }: Props) => {
-  return <section className='w-full rounded-xl bg-primary p-8 text-white drop-shadow-md'>{children} </section>;
+    return <section className='w-full rounded-xl bg-primary p-8 text-white drop-shadow-md'>{children} </section>;
 };
 
+SectionRoundedBox.displayName = "SectionRoundedBox";
 export default SectionRoundedBox;

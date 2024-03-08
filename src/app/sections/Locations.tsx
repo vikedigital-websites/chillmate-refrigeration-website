@@ -45,4 +45,6 @@ const Locations = (props: Props) => {
     );
 };
 
+Locations.displayName = "Locations";
+
 export default Locations;
