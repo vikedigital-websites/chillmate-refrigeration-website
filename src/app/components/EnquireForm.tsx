@@ -19,6 +19,7 @@ const FormInput = forwardRef(({ id, type, name, autoComplete, onFocus, onBlur, r
         />
     );
 });
+FormInput.displayName = "FormInput";
 const FormTextArea = forwardRef(({ id, name, autoComplete, onFocus, onBlur, required }: React.ComponentPropsWithoutRef<"textarea">, ref: ForwardedRef<HTMLTextAreaElement | null>) => {
     return (
         <textarea
@@ -74,7 +75,6 @@ const FormItem = ({ inputType, name, id, autoComplete, type, label, className, p
 };
 FormItem.displayName = "FormItem";
 
-FormItem.displayName = "FormItem";
 const EnquireForm = ({ uid }: { uid: string }) => {
     return (
         <form className='flex flex-col items-center justify-center gap-6'>
@@ -90,5 +90,7 @@ const EnquireForm = ({ uid }: { uid: string }) => {
         </form>
     );
 };
+
+EnquireForm.displayName = "EnquireForm";
 
 export default EnquireForm;
