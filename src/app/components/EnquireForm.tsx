@@ -4,12 +4,34 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 type Props = React.ComponentPropsWithoutRef<"form"> & {};
 
-const FormInput = forwardRef(({ ...allProps }: React.ComponentPropsWithoutRef<"input">, ref: ForwardedRef<HTMLInputElement | null>) => {
-    return <input ref={ref} {...allProps} className='relative  w-full  rounded-lg bg-white/75 p-3 text-sm text-black outline-none focus:ring-2 focus:ring-white' />;
+const FormInput = forwardRef(({ id, type, name, autoComplete, onFocus, onBlur, required }: React.ComponentPropsWithoutRef<"input">, ref: ForwardedRef<HTMLInputElement | null>) => {
+    return (
+        <input
+            ref={ref}
+            type={type}
+            id={id}
+            name={name}
+            autoComplete={autoComplete}
+            required={required}
+            className='relative w-full rounded-lg bg-white/75 p-3 text-sm text-black outline-none focus:ring-2 focus:ring-white'
+            onFocus={onFocus}
+            onBlur={onBlur}
+        />
+    );
 });
-FormInput.displayName = "FormInput";
-const FormTextArea = forwardRef(({ ...allProps }: React.ComponentPropsWithoutRef<"textarea">, ref: ForwardedRef<HTMLTextAreaElement | null>) => {
-    return <textarea ref={ref} className='relative max-h-48 min-h-48  w-full  rounded-lg bg-white/75 p-3 text-sm text-black outline-none focus:ring-2 focus:ring-white' {...allProps} />;
+const FormTextArea = forwardRef(({ id, name, autoComplete, onFocus, onBlur, required }: React.ComponentPropsWithoutRef<"textarea">, ref: ForwardedRef<HTMLTextAreaElement | null>) => {
+    return (
+        <textarea
+            ref={ref}
+            id={id}
+            name={name}
+            autoComplete={autoComplete}
+            required={required}
+            className='relative max-h-48 min-h-48  w-full  rounded-lg bg-white/75 p-3 text-sm text-black outline-none focus:ring-2 focus:ring-white'
+            onFocus={onFocus}
+            onBlur={onBlur}
+        />
+    );
 });
 FormTextArea.displayName = "FormTextArea";
 const FormLabel = forwardRef(({ htmlFor, children, isFocused }: React.ComponentPropsWithoutRef<"label"> & { isFocused: boolean }, ref) => {
@@ -50,6 +72,7 @@ const FormItem = ({ inputType, name, id, autoComplete, type, label, className, p
         </div>
     );
 };
+FormItem.displayName = "FormItem";
 
 FormItem.displayName = "FormItem";
 const EnquireForm = ({ uid }: { uid: string }) => {
@@ -67,7 +90,5 @@ const EnquireForm = ({ uid }: { uid: string }) => {
         </form>
     );
 };
-
-EnquireForm.displayName = "EnquireForm";
 
 export default EnquireForm;
