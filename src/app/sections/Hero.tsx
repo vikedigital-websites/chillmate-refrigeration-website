@@ -11,7 +11,7 @@ const Hero = (props: Props) => {
     return (
         <section
             id='hero-section'
-            className='relative flex w-full gap-8 rounded-2xl bg-primary bg-cover px-8 py-16 text-white drop-shadow-md md:px-28 lg:grid lg:grid-cols-[1.1fr_0.90fr]'
+            className='relative flex w-full gap-8 rounded-2xl bg-primary bg-cover px-8 py-16 text-white md:px-28 lg:grid lg:grid-cols-[1.1fr_0.90fr]'
             style={{ backgroundImage: `linear-gradient(90deg, rgba(49,78,102,95) 0%, rgba(49,78,102,95) 35%, rgba(49,78,102,0.80) 100%), url('${heroImage.src}'); `, backgroundPosition: "right center" }}>
             <AnchorMagnet sectionId='hero' />
             <div id='hero' className='flex flex-col content-start items-center justify-center gap-8 sm:items-start'>
