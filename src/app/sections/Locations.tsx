@@ -10,35 +10,65 @@ const Locations = (props: Props) => {
     return (
         <section id='locations-section' className='relative flex w-full flex-col items-center gap-8 rounded-2xl bg-primary p-8 text-white drop-shadow-md md:p-16'>
             <AnchorMagnet sectionId='locations' />
-            <SectionHeading theme='light'>Areas We Cover</SectionHeading>
-            <div className='flex flex-col items-center gap-4'>
-                <h3 className='text-center'>Based in Burleigh Waters QLD</h3>
-                <p className='max-w-lg text-center font-light'>{`Can't find your suburb listed, but you're nearby? Feel free to give us a call and see if we can assist you.`}</p>
-            </div>
 
             <div className='grid grid-rows-[1fr-min-content] gap-8 lg:grid-cols-2 lg:grid-rows-1'>
-                <div id='locations-left' className='overflow-hidden rounded-xl'>
-                    <Image src={locationMap} alt='locations map' width={0} height={0} id='logo' className='h-auto w-full' priority></Image>
+                <div id='locations-lef' className='t flex flex-col justify-between gap-4'>
+                    <SectionHeading theme='light'>Areas We Cover</SectionHeading>
+
+                    <h3 className='text-base capitalize'>Based in Burleigh Waters QLD</h3>
+
+                    <div className='grid grid-cols-[max-content_max-content] grid-rows-1 justify-between gap-2 [&>ul>li]:list-inside [&>ul>li]:list-disc [&>ul>li]:text-base'>
+                        <ul id='locations-list-one' className=' flex flex-col gap-4 md:gap-4 lg:text-start'>
+                            <li>
+                                Austinville <span className='hidden md:inline'> - 4213</span>
+                            </li>
+                            <li>
+                                Benowa <span className='hidden md:inline'>- 4217</span>
+                            </li>
+                            <li>
+                                Broadbeach <span className='hidden md:inline'>- 4218</span>
+                            </li>
+                            <li>
+                                Australia Fair <span className='hidden md:inline'>- 4215</span>
+                            </li>
+                            <li>
+                                Arundel <span className='hidden md:inline'>- 4214</span>
+                            </li>
+                            <li>
+                                Elanora <span className='hidden md:inline'>- 4221</span>
+                            </li>
+                            <li>
+                                West Burleigh <span className='hidden md:inline'>- 4219</span>
+                            </li>
+                        </ul>
+                        <ul id='locations-list-two' className=' flex flex-col gap-4  md:gap-4 lg:text-start'>
+                            <li>
+                                Clear Island Waters <span className='hidden md:inline'>- 4226</span>
+                            </li>
+                            <li>
+                                Reedy Creek <span className='hidden md:inline'>- 4227</span>
+                            </li>
+                            <li>
+                                Robina <span className='hidden md:inline'>- 4230</span>
+                            </li>
+                            <li>
+                                Tugun <span className='hidden md:inline'>- 4224</span>
+                            </li>
+                            <li>
+                                Currumbin <span className='hidden md:inline'>- 4223</span>
+                            </li>
+                            <li>
+                                Tweed Heads <span className='hidden md:inline'>- 2485</span>
+                            </li>
+                            <li>
+                                Burleigh<span className='hidden md:inline'> - 4220</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p className='ont-light'>{`Can't find your suburb listed, but you're nearby? Feel free to give us a call and see if we can assist you.`}</p>
                 </div>
-                <div id='locations-right' className='grid grid-rows-2 items-center gap-4 lg:grid-cols-2 lg:grid-rows-1 md:[&>ul>li]:list-inside md:[&>ul>li]:list-disc'>
-                    <ul id='locations-list-one' className=' flex flex-col gap-4 text-center md:gap-8 lg:text-start'>
-                        <li>Austinville - 4213</li>
-                        <li>Benowa - 4217</li>
-                        <li>Broadbeach - 4218</li>
-                        <li>Australia Fair - 4215</li>
-                        <li>Arundel - 4214</li>
-                        <li>Elanora - 4221</li>
-                        <li>West Burleigh - 4219</li>
-                    </ul>
-                    <ul id='locations-list-two' className=' flex flex-col gap-4 text-center md:gap-8 lg:text-start'>
-                        <li>Clear Island Waters - 4226</li>
-                        <li>Reedy Creek - 4227</li>
-                        <li>Robina - 4230</li>
-                        <li>Tugun - 4224</li>
-                        <li>Currumbin - 4223</li>
-                        <li>Tweed Heads - 2485</li>
-                        <li>Burleigh - 4220</li>
-                    </ul>
+                <div id='locations-right' className='overflow-hidden rounded-xl'>
+                    <Image src={locationMap} alt='locations map' width={0} height={0} id='logo' className='h-full w-full object-cover' priority></Image>
                 </div>
             </div>
         </section>
