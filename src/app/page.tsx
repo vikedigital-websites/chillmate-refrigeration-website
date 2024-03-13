@@ -46,7 +46,7 @@ export default function Home() {
 
     return (
         <>
-            <div className='sticky top-0 z-50'>
+            <div className='fixed top-0 z-50'>
                 <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`} className=' flex w-screen items-center justify-center gap-2 bg-primary p-2 text-center text-white'>
                     CALL DYLAN ON: <b className='animate-pulse'>{process.env.NEXT_PUBLIC_PHONE_NUMBER}</b>
                     <PhoneIcon className='animate-pulse' />
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
 
             {isClient && sideMenuIsOpen && <SideMenu logo={logo} close={closeSideMenu} navItems={navItems}></SideMenu>}
-            <main className='flex w-full max-w-[1120px] flex-col gap-32 overflow-x-hidden px-4 xl:p-0'>
+            <main className='mt-32 flex w-full max-w-[1120px] flex-col gap-32 overflow-x-hidden px-4 md:mt-40 xl:p-0'>
                 <Hero />
                 <Services />
                 <Locations />

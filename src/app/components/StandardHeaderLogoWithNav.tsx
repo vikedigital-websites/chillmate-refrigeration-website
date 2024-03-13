@@ -1,7 +1,7 @@
 import useClient from "@/hooks/useClient";
 import { useMediaQuery } from "@react-hook/media-query";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoMenu as MenuIcon } from "react-icons/io5";
 
 type Props = {
@@ -19,9 +19,27 @@ const StandardHeaderLogoWithNav = ({ logo, navItems, openMobileMenu }: Props) =>
             </a>
         );
     });
+
+    const [headerSize, setHeaderSize] = useState<string>("py-4 h-20 md:h-28");
+
+    useEffect(() => {
+        const scrollFunction = () => {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                headerSize !== "py-2 h-14 md:h-20" && setHeaderSize("py-2 h-14 md:h-20");
+            } else {
+                headerSize !== "py-4 h-20 md:h-28" && setHeaderSize("py-4 h-20 md:h-28");
+            }
+        };
+
+        window.addEventListener("scroll", scrollFunction);
+
+        return () => {
+            window.removeEventListener("scroll", scrollFunction);
+        };
+    });
     return (
         <header id='header' className='flex w-full justify-center bg-white'>
-            <div className='flex h-20 w-full max-w-[1120px]  items-center justify-between bg-white px-4 py-4 md:h-28 '>
+            <div className={`flex w-full max-w-[1120px] items-center justify-between bg-white px-4 ${headerSize} transition-all`}>
                 <a href='#hero' className='h-full w-auto'>
                     <Image src={logo} alt='Chillmate Logo' width={0} height={0} id='logo' className='h-full w-auto' priority></Image>
                 </a>

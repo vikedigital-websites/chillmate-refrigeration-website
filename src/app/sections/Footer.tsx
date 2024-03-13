@@ -8,7 +8,7 @@ type Props = {};
 const Footer = () => {
     return (
         <footer id='footer-section' className='mt-64 flex w-full flex-col justify-center bg-primary p-16 text-white'>
-            <div className='cl:flex-col flex w-full flex-col items-center justify-between text-center lg:max-h-[500px] lg:flex-wrap  lg:items-start lg:text-start xl:max-h-[400px] 2xl:max-h-[450px] [&>*]:pb-8 [&_ul]:list-inside lg:[&_ul]:list-disc'>
+            <div className='cl:flex-col flex w-full flex-col items-center justify-between text-center lg:max-h-[500px] lg:flex-wrap  lg:items-start lg:text-start xl:max-h-[400px] 2xl:max-h-[450px] [&>*]:pb-8 [&_h3]:text-base [&_h3]:font-bold [&_li]:list-["›_"] [&_ul]:list-inside lg:[&_ul]:list-disc'>
                 <div className='hidden max-w-3xl flex-col gap-16 2xl:flex'>
                     <Image src={logo} alt='Chillmate Logo' width={0} height={0} id='logo' className='h-auto w-full max-w-lg' priority></Image>
                     <p>
