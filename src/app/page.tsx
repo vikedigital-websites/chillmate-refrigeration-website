@@ -12,6 +12,7 @@ import Hero from "./sections/Hero";
 import Locations from "./sections/Locations";
 import Services from "./sections/Services";
 import ServiceDetailModal from "./components/ServiceDetailModal";
+import { FaPhoneFlip as PhoneIcon } from "react-icons/fa6";
 
 export default function Home() {
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -45,10 +46,13 @@ export default function Home() {
 
     return (
         <>
-            <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`} className='block w-screen bg-primary p-2 text-center text-white'>
-                CALL DYLAN ON: <b>{process.env.NEXT_PUBLIC_PHONE_NUMBER}</b>
-            </a>
-            <StandardHeaderLogoWithNav logo={logo} navItems={navItems} openMobileMenu={() => setSideMenuIsOpen((prev) => !prev)} />
+            <div className='sticky top-0 z-50'>
+                <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`} className=' flex w-screen items-center justify-center gap-2 bg-primary p-2 text-center text-white'>
+                    CALL DYLAN ON: <b className='animate-pulse'>{process.env.NEXT_PUBLIC_PHONE_NUMBER}</b>
+                    <PhoneIcon className='animate-pulse' />
+                </a>
+                <StandardHeaderLogoWithNav logo={logo} navItems={navItems} openMobileMenu={() => setSideMenuIsOpen((prev) => !prev)} />
+            </div>
 
             {isClient && sideMenuIsOpen && <SideMenu logo={logo} close={closeSideMenu} navItems={navItems}></SideMenu>}
             <main className='flex w-full max-w-[1120px] flex-col gap-32 overflow-x-hidden px-4 xl:p-0'>

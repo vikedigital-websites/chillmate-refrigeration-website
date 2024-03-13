@@ -16,7 +16,7 @@ const Hero = (props: Props) => {
             <AnchorMagnet sectionId='hero' />
             <div id='hero' className='flex flex-col content-start items-center justify-center gap-8 sm:items-start'>
                 <h1 className='font text-center font-bold leading-relaxed tracking-wider sm:text-left'>Chill Out With Expert Refrigeration Solutions</h1>
-                <p className='text-center text-sm font-thin leading-relaxed sm:text-left lg:mr-28'>
+                <p className='text-center text-sm font-light leading-relaxed sm:text-left lg:mr-28'>
                     When it comes to refrigeration solutions, we offer fast, reliable, and affordable services you can depend on. Count on us to maximize efficiency and minimize downtime.
                 </p>
                 <PillButton onClick={() => (location.href = "#contact")}>Contact Us Now</PillButton>

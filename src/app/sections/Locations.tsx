@@ -17,7 +17,7 @@ const Locations = (props: Props) => {
 
                     <h3 className='text-base capitalize'>Based in Burleigh Waters QLD</h3>
 
-                    <div className='grid grid-cols-[max-content_max-content] grid-rows-1 justify-between gap-2 [&>ul>li]:list-inside [&>ul>li]:list-disc [&>ul>li]:text-base'>
+                    <div className='grid grid-cols-[max-content_max-content] grid-rows-1 justify-between gap-2 [&>ul>li]:list-inside [&>ul>li]:list-["›_"] [&>ul>li]:text-base'>
                         <ul id='locations-list-one' className=' flex flex-col gap-4 md:gap-4 lg:text-start'>
                             <li>
                                 Austinville <span className='hidden md:inline'> - 4213</span>
