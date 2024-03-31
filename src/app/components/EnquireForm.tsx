@@ -35,9 +35,9 @@ const FormTextArea = forwardRef(({ id, name, autoComplete, onFocus, onBlur, requ
     );
 });
 FormTextArea.displayName = "FormTextArea";
-const FormLabel = forwardRef(({ htmlFor, children, isFocused }: React.ComponentPropsWithoutRef<"label"> & { isFocused: boolean }, ref) => {
+const FormLabel = forwardRef(({ htmlFor, children, isFocused, ...props }: React.ComponentPropsWithoutRef<"label"> & { isFocused: boolean }, ref) => {
     return (
-        <label htmlFor={htmlFor} className={`absolute z-10 origin-top-left  ${isFocused ? "bottom-full pb-1 pl-3 text-xs text-white " : "p-3 text-sm text-primary"} `}>
+        <label {...props} htmlFor={htmlFor} className={`absolute z-10 origin-top-left transition-all ${isFocused ? "bottom-full pb-1 pl-3 text-xs text-white" : "p-3 text-sm text-primary"} `}>
             {children}
         </label>
     );
