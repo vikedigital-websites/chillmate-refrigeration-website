@@ -24,7 +24,7 @@ const Services = (props: Props) => {
 
     return (
         <>
-            <section id='services-section' className='relative flex w-full flex-col items-center gap-16'>
+            <section id='services-section' className='relative flex w-full flex-col items-center  gap-16'>
                 <AnchorMagnet sectionId='services' />
                 <SectionHeading>Our Services</SectionHeading>
                 <div className='grid w-full grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-1'>

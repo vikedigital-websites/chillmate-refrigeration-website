@@ -46,7 +46,7 @@ const Contact = (props: Props) => {
                     </div>
                 </div>
                 <div id='locations-left' className=' rounded-xl'>
-                    <EnquireForm uid='' />
+                    <EnquireForm uid='contact' />
                 </div>
             </div>
         </section>
