@@ -7,7 +7,7 @@ type Props = React.ComponentPropsWithoutRef<"form"> & {};
 
 const EnquireForm = ({ uid }: { uid: string }) => {
     return (
-        <Form action='https://formsubmit.co/f04c55a590ccd5dfc86262c7a9c11fa7' method='POST'>
+        <Form action='https://formsubmit.co/def2d41314d442c73c1530281cfcaa1b' method='POST'>
             <input type='hidden' name='_next' value='https://chillmaterefrigeration.com/thanks/'></input>
             <input type='hidden' name='_captcha' value='false'></input>
             <input type='hidden' name='_template' value='table'></input>

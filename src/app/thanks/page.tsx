@@ -6,7 +6,7 @@ import Link from "next/link";
 
 type Props = {};
 
-function page({}: Props) {
+function ThanksPage({}: Props) {
     const [count, setCount] = useState(3);
     const router = useRouter();
 
@@ -47,6 +47,10 @@ function page({}: Props) {
             </div>
         </>
     );
+}
+
+function page({}: Props) {
+    return <ThanksPage />;
 }
 
 export default page;
