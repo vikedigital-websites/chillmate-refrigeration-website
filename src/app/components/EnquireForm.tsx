@@ -2,16 +2,19 @@ import React, { ForwardedRef, HTMLAttributes, HTMLInputTypeAttribute, forwardRef
 import PillButton from "./PillButton";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Form, { FormInputWithLabel, FormTextAreaWithLabel } from "./Form";
+import useUserTimeZone from "@/hooks/useUserTimeZone";
 
 type Props = React.ComponentPropsWithoutRef<"form"> & {};
 
 const EnquireForm = ({ uid }: { uid: string }) => {
+    const userTimeZone = useUserTimeZone();
     return (
         <Form action='https://formsubmit.co/def2d41314d442c73c1530281cfcaa1b' method='POST'>
-            <input type='hidden' name='_next' value='https://chillmaterefrigeration.com/thanks/'></input>
-            <input type='hidden' name='_captcha' value='false'></input>
+            <input type='hidden' name='_next' value={`${process.env.NEXT_PUBLIC_BASE_SLUG}thanks/`}></input>
+            <input type='hidden' name='_captcha' value='true'></input>
             <input type='hidden' name='_template' value='table'></input>
             <input type='text' name='_honey' style={{ display: "none" }}></input>
+            <input type='hidden' name='user-timezone_(may-be-spam-if-not-australia)' readOnly value={userTimeZone || "null"}></input>
             <input
                 type='hidden'
                 name='_autoresponse'
@@ -24,7 +27,7 @@ const EnquireForm = ({ uid }: { uid: string }) => {
             </div>
 
             <FormInputWithLabel label='Suburb' required type='text' id={`suburb-${uid}`} name='suburb' autoComplete='suburb' />
-            <FormInputWithLabel label='Phone' required type='tel' pattern='^(?:\(?(?:0[2378]\d{1}|13\d{1}|1800|1900)\)?[\s-]?\d{4}[\s-]?\d{4}|\(?(?:04|\+614)(?:[ ]?\d){8}\)?)$' id={`phone-${uid}`} name='phone' autoComplete='tel-local' />
+            <FormInputWithLabel label='Phone' required type='tel' pattern='^(?:(?:\+?61|0)4(?:[ ]?\d){8}|13\d{4}|(?:(?:\+?61\s?)?0?[1-9](?:[ ]?\d){8}))$' id={`phone-${uid}`} name='phone' autoComplete='tel-local' />
 
             <FormTextAreaWithLabel label='Message' required id={`message-${uid}`} name='message' />
             <PillButton type='submit'>Send</PillButton>
